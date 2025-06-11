@@ -1,82 +1,68 @@
 <template>
-  <CRow>
-    <CCol :xs="12">
-      <DocsComponents href="forms/range.html" />
-      <CCard class="mb-4">
-        <CCardHeader> <strong>Vue Range</strong> <small></small> </CCardHeader>
-        <CCardBody>
-          <p class="text-body-secondary small">
-            Create custom
-            <code>&lt;input type=&#34;range&#34;&gt;</code> controls with
-            <code>&lt;CFormRange&gt;</code>.
-          </p>
-          <DocsExample href="forms/range.html">
-            <CFormLabel for="customRange1">Example range</CFormLabel>
-            <CFormRange id="customRange1" />
-          </DocsExample>
-        </CCardBody>
-      </CCard>
-    </CCol>
-    <CCol :xs="12">
-      <CCard class="mb-4">
-        <CCardHeader>
-          <strong>Vue Range</strong> <small>Disabled</small>
-        </CCardHeader>
-        <CCardBody>
-          <p class="text-body-secondary small">
-            Add the <code>disabled</code> boolean attribute on an input to give
-            it a grayed out appearance and remove pointer events.
-          </p>
-          <DocsExample href="forms/range.html#disabled">
-            <CFormLabel for="disabledRange">Disabled range</CFormLabel>
-            <CFormRange id="disabledRange" disabled />
-          </DocsExample>
-        </CCardBody>
-      </CCard>
-    </CCol>
-    <CCol :xs="12">
-      <CCard class="mb-4">
-        <CCardHeader>
-          <strong>Vue Range</strong> <small>Min and max</small>
-        </CCardHeader>
-        <CCardBody>
-          <p class="text-body-secondary small">
-            Range inputs have implicit values for <code>min</code> and
-            <code>max</code>— <code>0</code> and <code>100</code>, respectively.
-            You may specify new values for those using the <code>min</code> and
-            <code>max</code> attributes.
-          </p>
-          <DocsExample href="forms/range.html#min-and-max">
-            <CFormLabel for="customRange2">Example range</CFormLabel>
-            <CFormRange id="customRange2" :min="0" :max="5" :value="3" />
-          </DocsExample>
-        </CCardBody>
-      </CCard>
-    </CCol>
-    <CCol :xs="12">
-      <CCard class="mb-4">
-        <CCardHeader>
-          <strong>Vue Range</strong> <small>Steps</small>
-        </CCardHeader>
-        <CCardBody>
-          <p class="text-body-secondary small">
-            By default, range inputs &#34;snap&#34; to integer values. To change
-            this, you can specify a <code>step</code> value. In the example
-            below, we double the number of steps by using
-            <code>step=&#34;0.5&#34;</code>.
-          </p>
-          <DocsExample href="forms/range.html#steps">
-            <CFormLabel for="customRange3">Example range</CFormLabel>
-            <CFormRange
-              id="customRange3"
-              :min="0"
-              :max="5"
-              :step="0.5"
-              :value="3"
-            />
-          </DocsExample>
-        </CCardBody>
-      </CCard>
-    </CCol>
-  </CRow>
+  <div>
+    <h5 class="fw-bold mb-3">SERIES SETTING</h5>
+    <CCard class="p-3 charts-card">
+      <h6 class="fw-bold mb-3">Sports List</h6>
+      <CFormSelect size="sm" class="mb-3" style="width: 200px" aria-label="Small select example custom-select">
+        <option>Open this select menu</option>
+        <option value="football">Football</option>
+        <option value="cricket">Cricket</option>
+        <option value="tennis">Tennis</option>
+      </CFormSelect>
+      <CTable hover bordered responsive>
+        <CTableHead>
+          <CTableRow>
+            <CTableHeaderCell>Name</CTableHeaderCell>
+            <CTableHeaderCell>Sport Name</CTableHeaderCell>
+            <CTableHeaderCell>Status</CTableHeaderCell>
+          </CTableRow>
+        </CTableHead>
+        <CTableBody>
+          <CTableRow v-for="(sport, index) in sports" :key="index">
+            <CTableDataCell>{{ sport.name }}</CTableDataCell>
+            <CTableDataCell>{{ sport.sport_name }}</CTableDataCell>
+            <CTableDataCell>
+              <CFormSwitch v-model="sport.enabled" size="lg" shape="pill" color="success" />
+            </CTableDataCell>
+          </CTableRow>
+        </CTableBody>
+      </CTable>
+    </CCard>
+  </div>
 </template>
+
+<script setup>
+import { ref } from 'vue'
+
+const sports = ref([
+  { name: 'Tennis', sport_name: "Football", enabled: false },
+  { name: 'Football', sport_name: "Football", enabled: false },
+  { name: 'Cricket', sport_name: "Football", enabled: false },
+  { name: 'Horse Racing', sport_name: "Football", enabled: false },
+  { name: 'Greyhound Racing', sport_name: "Football", enabled: false },
+  { name: 'KABADDI', sport_name: "Football", enabled: false },
+  { name: 'Virtual T10', sport_name: "Football", enabled: false },
+  { name: 'Basketball', sport_name: "Football", enabled: false },
+  { name: 'Volleyball', sport_name: "Football", enabled: false },
+  { name: 'Baseball', sport_name: "Football", enabled: false },
+  { name: 'Casino', sport_name: "Football", enabled: false },
+  { name: 'Election', sport_name: "Football", enabled: false },
+])
+</script>
+
+<style scoped>
+.charts-card {
+  box-shadow: 0 0.75rem 1.5rem rgba(18, 38, 63, 0.03);
+  border: none !important;
+}
+
+.fw-bold {
+  font-weight: 600;
+}
+
+::v-deep(.custom-select:focus) {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: #ced4da !important;
+}
+</style>

@@ -93,7 +93,7 @@
             <CFormLabel>Ex</CFormLabel>
           </CCol>
           <CCol xs="6" md="2" class="text-end">
-            <CButton color="success" class="">Submit</CButton>
+            <CButton class="submit-btn">Submit</CButton>
           </CCol>
         </CRow>
       </div>
@@ -114,7 +114,7 @@
             <div class="text-muted">Ex:(32*32, ICO)</div>
           </CCol>
           <CCol xs="6" md="2" class="text-end">
-            <CButton color="success">Submit</CButton>
+            <CButton class="submit-btn">Submit</CButton>
           </CCol>
         </CRow>
       </div>
@@ -135,7 +135,7 @@
             <div class="text-muted">Ex:(32*32, ICO)</div>
           </CCol>
           <CCol xs="6" md="2" class="text-end">
-            <CButton color="success">Submit</CButton>
+            <CButton class="submit-btn">Submit</CButton>
           </CCol>
         </CRow>
       </div>
@@ -206,13 +206,18 @@
           <CFormSelect :options="withdrawOptions" v-model="withdrawUrl" />
         </CCol>
       </CRow>
+      <div class="h3 pb-2 mb-3 border-bottom border-dark thick-border-bottom"></div>
 
-      <CRow class="mt-4">
-        <CCol md="6">
-          <CFormInput v-model="footerLeft" placeholder="Site title" />
+      <CRow class="mt-4 align-items-end">
+        <CCol md="4" class="mb-3">
+          <CFormInput v-model="footerLeft" class="footer-input" placeholder="Site title" />
         </CCol>
-        <CCol md="6">
-          <CFormInput v-model="footerRight" />
+        <CCol md="4" class="mb-3">
+          <CFormInput v-model="footerMiddle" class="footer-input" placeholder="Welcome text" />
+        </CCol>
+        <CCol md="4" class="mb-3 d-flex justify-content-between">
+          <CFormInput v-model="footerRight" class="footer-input" placeholder="Transaction text" />
+          <CButton color="success" class="ms-2 submit-btn">Submit</CButton>
         </CCol>
       </CRow>
     </CCard>
@@ -289,5 +294,16 @@ const emailOptions = ['Active', 'Inactive']
   border-color: #ced4da !important;
   box-shadow: none !important;
   outline: none !important;
+}
+
+.footer-input {
+  max-width: 100px;
+  width: 100%;
+}
+
+.submit-btn {
+  color: #fff;
+  background-color: #34c38f;
+  border-color: #34c38f;
 }
 </style>

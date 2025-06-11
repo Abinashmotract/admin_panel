@@ -161,6 +161,11 @@ const routes = [
         redirect: '/forms/form-control',
         children: [
           {
+            path: '/forms/banner-setting',
+            name: 'Banner Setting',
+            component: () => import('@/views/forms/BannerSetting.vue'),
+          },
+          {
             path: '/forms/form-control',
             name: 'Form Control',
             component: () => import('@/views/forms/FormControl.vue'),

@@ -1,173 +1,87 @@
 <template>
-  <CRow>
-    <CCol :xs="12">
-      <DocsComponents href="forms/floating-labels.html" />
-      <CCard class="mb-4">
-        <CCardHeader>
-          <strong>Vue Floating labels</strong>
-        </CCardHeader>
-        <CCardBody>
-          <p class="text-body-secondary small">
-            Wrap a pair of <code>&lt;CFormInput&gt;</code> and
-            <code>&lt;CFormLabel&gt;</code> elements in
-            <code>CFormFloating</code> to enable floating labels with textual
-            form fields. A <code>placeholder</code> is required on each
-            <code>&lt;CFormInput&gt;</code> as our method of CSS-only floating
-            labels uses the <code>:placeholder-shown</code> pseudo-element. Also
-            note that the <code>&lt;CFormInput&gt;</code> must come first so we
-            can utilize a sibling selector (e.g., <code>~</code>).
-          </p>
-          <DocsExample href="forms/floating-labels.html">
-            <CFormFloating class="mb-3">
-              <CFormInput
-                id="floatingInput"
-                type="email"
-                placeholder="name@example.com"
-              />
-              <CFormLabel for="floatingInput">Email address</CFormLabel>
-            </CFormFloating>
-            <CFormFloating>
-              <CFormInput
-                id="floatingPassword"
-                type="password"
-                placeholder="Password"
-              />
-              <CFormLabel for="floatingPassword">Password</CFormLabel>
-            </CFormFloating>
-          </DocsExample>
-          <p class="text-body-secondary small">
-            When there&#39;s a <code>value</code> already defined,
-            <code>&lt;CFormLabel&gt;</code>
-            s will automatically adjust to their floated position.
-          </p>
-          <DocsExample href="forms/floating-labels.html">
-            <CFormFloating>
-              <CFormInput
-                id="floatingInputValue"
-                type="email"
-                placeholder="name@example.com"
-                value="test@example.com"
-              />
-              <CFormLabel for="floatingInputValue">Input with value</CFormLabel>
-            </CFormFloating>
-          </DocsExample>
-        </CCardBody>
-      </CCard>
-    </CCol>
-    <CCol :xs="12">
-      <CCard class="mb-4">
-        <CCardHeader>
-          <strong>Vue Floating labels</strong> <small>Textareas</small>
-        </CCardHeader>
-        <CCardBody>
-          <p class="text-body-secondary small">
-            By default, <code>&lt;CFormTextarea&gt;</code>s will be the same
-            height as <code>&lt;CFormInput&gt;</code>s.
-          </p>
-          <DocsExample href="forms/floating-labels.html#textareas">
-            <CFormFloating>
-              <CFormTextarea
-                id="floatingTextarea"
-                placeholder="Leave a comment here"
-              ></CFormTextarea>
-              <CFormLabel for="floatingTextarea">Comments</CFormLabel>
-            </CFormFloating>
-          </DocsExample>
-          <p class="text-body-secondary small">
-            To set a custom height on your <code>&lt;CFormTextarea;&gt;</code>,
-            do not use the <code>rows</code> attribute. Instead, set an explicit
-            <code>height</code> (either inline or via custom CSS).
-          </p>
-          <DocsExample href="forms/floating-labels.html#textareas">
-            <CFormFloating>
-              <CFormTextarea
-                id="floatingTextarea2"
-                placeholder="Leave a comment here"
-                style="height: 100px"
-              ></CFormTextarea>
-              <CFormLabel for="floatingTextarea2">Comments</CFormLabel>
-            </CFormFloating>
-          </DocsExample>
-        </CCardBody>
-      </CCard>
-    </CCol>
-    <CCol :xs="12">
-      <CCard class="mb-4">
-        <CCardHeader>
-          <strong>Vue Floating labels</strong> <small>Selects</small>
-        </CCardHeader>
-        <CCardBody>
-          <p class="text-body-secondary small">
-            Other than <code>&lt;CFormInput&gt;</code>, floating labels are only
-            available on <code>&lt;CFormSelect&gt;</code>s. They work in the
-            same way, but unlike <code>&lt;CFormInput&gt;</code>s, they&#39;ll
-            always show the <code>&lt;CFormLabel&gt;</code> in its floated
-            state.
-            <strong>
-              Selects with <code>size</code> and <code>multiple</code> are not
-              supported.
-            </strong>
-          </p>
-          <DocsExample href="forms/floating-labels.html#selects">
-            <CFormFloating>
-              <CFormSelect
-                id="floatingSelect"
-                aria-label="Floating label select example"
-              >
-                <option>Open this select menu</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-              </CFormSelect>
-              <CFormLabel for="floatingSelect">Works with selects</CFormLabel>
-            </CFormFloating>
-          </DocsExample>
-        </CCardBody>
-      </CCard>
-    </CCol>
-    <CCol :xs="12">
-      <CCard class="mb-4">
-        <CCardHeader>
-          <strong>Vue Floating labels</strong> <small>Layout</small>
-        </CCardHeader>
-        <CCardBody>
-          <p class="text-body-secondary small">
-            When working with the CoreUI for Bootstrap grid system, be sure to
-            place form elements within column classes.
-          </p>
-          <DocsExample href="forms/floating-labels.html#layout">
-            <CRow :xs="{ gutter: 2 }">
-              <CCol md>
-                <CFormFloating>
-                  <CFormInput
-                    id="floatingInputGrid"
-                    type="email"
-                    placeholder="name@example.com"
-                    value="email@example.com"
-                  />
-                  <CFormLabel for="floatingInputGrid">Email address</CFormLabel>
-                </CFormFloating>
-              </CCol>
-              <CCol md>
-                <CFormFloating>
-                  <CFormSelect
-                    id="floatingSelectGrid"
-                    aria-label="Floating label select example"
-                  >
-                    <option>Open this select menu</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                  </CFormSelect>
-                  <CFormLabel for="floatingSelectGrid"
-                    >Works with selects</CFormLabel
-                  >
-                </CFormFloating>
-              </CCol>
-            </CRow>
-          </DocsExample>
-        </CCardBody>
-      </CCard>
-    </CCol>
-  </CRow>
+  <div>
+    <h5 class="fw-bold mb-3">MARKET SETTING</h5>
+    <CCard class="p-3 charts-card">
+      <div class="d-flex gap-4">
+        <div>
+          <h6 class="fw-bold mb-1">Sport Name</h6>
+          <CFormSelect size="sm" class="mb-3" style="width: 200px" aria-label="Small select example custom-select">
+            <option>Open this select menu</option>
+            <option value="football">Football</option>
+            <option value="cricket">Cricket</option>
+            <option value="tennis">Tennis</option>
+          </CFormSelect>
+        </div>
+        <div>
+          <h6 class="fw-bold mb-1">Series Name</h6>
+          <CFormSelect size="sm" class="mb-3" style="width: 200px" aria-label="Small select example custom-select">
+            <option>All</option>
+            <option value="india">India</option>
+            <option value="brazil">Brazil</option>
+            <option value="canada">Canada</option>
+          </CFormSelect>
+        </div>
+        <div>
+          <h6 class="fw-bold mb-1">Match Name</h6>
+          <CFormSelect size="sm" class="mb-3" style="width: 200px" aria-label="Small select example custom-select">
+            <option>All</option>
+            <option value="india">India</option>
+            <option value="brazil">Brazil</option>
+            <option value="canada">Canada</option>
+          </CFormSelect>
+        </div>
+      </div>
+      <CTable hover bordered responsive>
+        <CTableHead>
+          <CTableRow>
+            <CTableHeaderCell>Series Name</CTableHeaderCell>
+            <CTableHeaderCell>Match Name</CTableHeaderCell>
+            <CTableHeaderCell>Match Date</CTableHeaderCell>
+            <CTableHeaderCell>Market Name</CTableHeaderCell>
+            <CTableHeaderCell>Market Id</CTableHeaderCell>
+            <CTableHeaderCell>Declare Result</CTableHeaderCell>
+          </CTableRow>
+        </CTableHead>
+        <CTableBody>
+          <CTableRow v-for="(sport, index) in sports" :key="index">
+            <CTableDataCell>{{ sport.series_name }}</CTableDataCell>
+            <CTableDataCell>{{ sport.match_name }}</CTableDataCell>
+            <CTableDataCell>{{ sport.match_date }}</CTableDataCell>
+            <CTableDataCell>{{ sport.market_name }}</CTableDataCell>
+            <CTableDataCell>{{ sport.market_id }}</CTableDataCell>
+            <CTableDataCell>
+              <CFormSelect v-model="sport.selectedResult" size="sm" style="width: 150px"
+                :options="sport.result.map((r) => ({ value: r.resutl_status, label: r.resutl_status }))" />
+            </CTableDataCell>
+
+          </CTableRow>
+        </CTableBody>
+      </CTable>
+    </CCard>
+  </div>
 </template>
+
+<script setup>
+import { ref } from 'vue'
+
+const sports = ref([
+  { series_name: 'ICC Champions Trophy', match_name: "New Zealand v India", match_date: "2025-03-02T09:00:00.000Z", market_name: "Match Odds", market_id: "1.240048911", result: [{ id: 1, resutl_status: "Declare" }, { id: 1, resutl_status: "New Zeland" }], selectedResult: "" },
+])
+</script>
+
+<style scoped>
+.charts-card {
+  box-shadow: 0 0.75rem 1.5rem rgba(18, 38, 63, 0.03);
+  border: none !important;
+}
+
+.fw-bold {
+  font-weight: 600;
+}
+
+::v-deep(.custom-select:focus) {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: #ced4da !important;
+}
+</style>

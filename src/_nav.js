@@ -211,42 +211,42 @@ export default [
         name: 'Series Setting',
         to: '/forms/range',
       },
+      // {
+      //   component: 'CNavItem',
+      //   name: 'Match Setting',
+      //   external: true,
+      //   badge: {
+      //     color: 'danger',
+      //     text: 'PRO',
+      //   },
+      // },
       {
         component: 'CNavItem',
         name: 'Match Setting',
-        external: true,
-        badge: {
-          color: 'danger',
-          text: 'PRO',
-        },
-      },
-      {
-        component: 'CNavItem',
-        name: 'Market Setting',
         to: '/forms/input-group',
       },
       {
         component: 'CNavItem',
-        name: 'Account Setting',
+        name: 'Market Setting',
         to: '/forms/floating-labels',
       },
-      {
-        component: 'CNavItem',
-        name: 'Online User',
-        external: true,
-        badge: {
-          color: 'danger',
-          text: 'PRO',
-        },
-      },
-      {
-        component: 'CNavItem',
-        name: 'Banner Setting',
-        badge: {
-          color: 'danger',
-          text: 'PRO',
-        },
-      },
+      // {
+      //   component: 'CNavItem',
+      //   name: 'Online User',
+      //   external: true,
+      //   badge: {
+      //     color: 'danger',
+      //     text: 'PRO',
+      //   },
+      // },
+      // {
+      //   component: 'CNavItem',
+      //   name: 'Banner Setting',
+      //   badge: {
+      //     color: 'danger',
+      //     text: 'PRO',
+      //   },
+      // },
       {
         component: 'CNavItem',
         name: 'Fancy Setting',
@@ -254,24 +254,29 @@ export default [
       },
       {
         component: 'CNavItem',
-        name: 'Rating',
-        href: 'https://coreui.io/vue/docs/forms/rating.html',
-        external: true,
-        badge: {
-          color: 'danger',
-          text: 'PRO',
-        },
+        name: 'Banner Setting',
+        to: '/forms/banner-setting',
       },
-      {
-        component: 'CNavItem',
-        name: 'Time Picker',
-        href: 'https://coreui.io/vue/docs/forms/time-picker.html',
-        external: true,
-        badge: {
-          color: 'danger',
-          text: 'PRO',
-        },
-      },
+      // {
+      //   component: 'CNavItem',
+      //   name: 'Rating',
+      //   href: 'https://coreui.io/vue/docs/forms/rating.html',
+      //   external: true,
+      //   badge: {
+      //     color: 'danger',
+      //     text: 'PRO',
+      //   },
+      // },
+      // {
+      //   component: 'CNavItem',
+      //   name: 'Time Picker',
+      //   href: 'https://coreui.io/vue/docs/forms/time-picker.html',
+      //   external: true,
+      //   badge: {
+      //     color: 'danger',
+      //     text: 'PRO',
+      //   },
+      // },
       {
         component: 'CNavItem',
         name: 'Layout',
@@ -279,7 +284,7 @@ export default [
       },
       {
         component: 'CNavItem',
-        name: 'Validation',
+        name: 'Online User',
         to: '/forms/validation',
       },
     ],
