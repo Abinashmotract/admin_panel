@@ -60,9 +60,16 @@ const users = ref([
             <CButton color="light" class="w-100">Reset</CButton>
           </CCol>
           <CCol class="text-end" :md="6">
-            <CButton color="success" class="me-2">
-              <i class="bi bi-plus-circle me-1"></i> CREATE ACCOUNT
-            </CButton>
+            <!-- <RouterLink custom to="/" v-slot="{ href, navigate }">
+        <CSidebarBrand v-bind="$attrs" as="a" :href="href" @click="navigate">
+          <img class="dashboard-logo" src="https://sitethemedata.com/sitethemes/world777.com/front/logo.png" alt="" />
+        </CSidebarBrand>
+      </RouterLink> -->
+            <RouterLink to="/base/cards">
+              <CButton color="success" class="me-2">
+                <i class="bi bi-plus-circle me-1"></i> CREATE ACCOUNT
+              </CButton>
+            </RouterLink>
             <CButton color="danger" class="me-2">
               <i class="bi bi-file-earmark-pdf"></i>
             </CButton>

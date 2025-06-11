@@ -9,10 +9,6 @@ export default [
       text: 'NEW',
     },
   },
-  // {
-  //   component: 'CNavTitle',
-  //   name: 'Theme',
-  // },
   {
     component: 'CNavItem',
     name: 'Market Analysis',
@@ -25,10 +21,6 @@ export default [
     to: '/theme/colors',
     icon: 'cil-drop',
   },
-  // {
-  //   component: 'CNavTitle',
-  //   name: 'Components',
-  // },
   {
     component: 'CNavGroup',
     name: 'Account',
@@ -151,240 +143,186 @@ export default [
       // }
     ],
   },
-  {
-    component: 'CNavItem',
-    name: 'Bank',
-    to: '/charts',
-    icon: 'cil-chart-pie',
-  },
-  {
-    component: 'CNavGroup',
-    name: 'Bonus',
-    to: '/buttons',
-    icon: 'cil-cursor',
-    items: [
-      {
-        component: 'CNavItem',
-        name: 'Bonus List',
-        to: '/buttons/standard-buttons',
-      },
-      {
-        component: 'CNavItem',
-        name: 'Bonus History',
-        to: '/buttons/button-groups',
-      },
-      // {
-      //   component: 'CNavItem',
-      //   name: 'Loading Button',
-      //   href: 'https://coreui.io/vue/docs/components/loading-button.html',
-      //   external: true,
-      //   badge: {
-      //     color: 'danger',
-      //     text: 'PRO',
-      //   },
-      // },
-      {
-        component: 'CNavItem',
-        name: 'Create Bonus',
-        to: '/buttons/dropdowns',
-      },
-    ],
-  },
-  {
-    component: 'CNavGroup',
-    name: 'Setting',
-    to: '/forms',
-    icon: 'cil-notes',
-    items: [
-      {
-        component: 'CNavItem',
-        name: 'Global Setting',
-        to: '/forms/select',
-      },
-      {
-        component: 'CNavItem',
-        name: 'Sport Setting',
-        to: '/forms/checks-radios',
-      },
-      {
-        component: 'CNavItem',
-        name: 'Series Setting',
-        to: '/forms/range',
-      },
-      // {
-      //   component: 'CNavItem',
-      //   name: 'Match Setting',
-      //   external: true,
-      //   badge: {
-      //     color: 'danger',
-      //     text: 'PRO',
-      //   },
-      // },
-      {
-        component: 'CNavItem',
-        name: 'Match Setting',
-        to: '/forms/input-group',
-      },
-      {
-        component: 'CNavItem',
-        name: 'Market Setting',
-        to: '/forms/floating-labels',
-      },
-      // {
-      //   component: 'CNavItem',
-      //   name: 'Online User',
-      //   external: true,
-      //   badge: {
-      //     color: 'danger',
-      //     text: 'PRO',
-      //   },
-      // },
-      // {
-      //   component: 'CNavItem',
-      //   name: 'Banner Setting',
-      //   badge: {
-      //     color: 'danger',
-      //     text: 'PRO',
-      //   },
-      // },
-      {
-        component: 'CNavItem',
-        name: 'Fancy Setting',
-        to: '/forms/form-control',
-      },
-      {
-        component: 'CNavItem',
-        name: 'Banner Setting',
-        to: '/forms/banner-setting',
-      },
-      // {
-      //   component: 'CNavItem',
-      //   name: 'Rating',
-      //   href: 'https://coreui.io/vue/docs/forms/rating.html',
-      //   external: true,
-      //   badge: {
-      //     color: 'danger',
-      //     text: 'PRO',
-      //   },
-      // },
-      // {
-      //   component: 'CNavItem',
-      //   name: 'Time Picker',
-      //   href: 'https://coreui.io/vue/docs/forms/time-picker.html',
-      //   external: true,
-      //   badge: {
-      //     color: 'danger',
-      //     text: 'PRO',
-      //   },
-      // },
-      {
-        component: 'CNavItem',
-        name: 'Layout',
-        to: '/forms/layout',
-      },
-      {
-        component: 'CNavItem',
-        name: 'Online User',
-        to: '/forms/validation',
-      },
-    ],
-  },
-  {
-    component: 'CNavGroup',
-    name: 'Icons',
-    to: '/icons',
-    icon: 'cil-star',
-    items: [
-      {
-        component: 'CNavItem',
-        name: 'CoreUI Icons',
-        to: '/icons/coreui-icons',
-        badge: {
-          color: 'info',
-          text: 'NEW',
-        },
-      },
-      {
-        component: 'CNavItem',
-        name: 'Brands',
-        to: '/icons/brands',
-      },
-      {
-        component: 'CNavItem',
-        name: 'Flags',
-        to: '/icons/flags',
-      },
-    ],
-  },
-  {
-    component: 'CNavGroup',
-    name: 'Notifications',
-    to: '/notifications',
-    icon: 'cil-bell',
-    items: [
-      {
-        component: 'CNavItem',
-        name: 'Alerts',
-        to: '/notifications/alerts',
-      },
-      {
-        component: 'CNavItem',
-        name: 'Badges',
-        to: '/notifications/badges',
-      },
-      {
-        component: 'CNavItem',
-        name: 'Modals',
-        to: '/notifications/modals',
-      },
-      {
-        component: 'CNavItem',
-        name: 'Toasts',
-        to: '/notifications/toasts',
-      },
-    ],
-  },
-  {
-    component: 'CNavItem',
-    name: 'Widgets',
-    to: '/widgets',
-    icon: 'cil-calculator',
-    badge: {
-      color: 'primary',
-      text: 'NEW',
-      shape: 'pill',
-    },
-  },
-  {
-    component: 'CNavTitle',
-    name: 'Extras',
-  },
-  {
-    component: 'CNavGroup',
-    name: 'Pages',
-    to: '/pages',
-    icon: 'cil-star',
-    items: [
-      {
-        component: 'CNavItem',
-        name: 'Login',
-        to: '/pages/login',
-      },
-      {
-        component: 'CNavItem',
-        name: 'Register',
-        to: '/pages/register',
-      },
-      {
-        component: 'CNavItem',
-        name: 'Error 404',
-        to: '/pages/404',
-      },
-      {
-        component: 'CNavItem',
-        name: 'Error 500',
-        to: '/pages/500',
-      },
-    ],
-  },
+
+  //comment code
+  // {
+  //   component: 'CNavItem',
+  //   name: 'Bank',
+  //   to: '/charts',
+  //   icon: 'cil-chart-pie',
+  // },
+  // {
+  //   component: 'CNavGroup',
+  //   name: 'Bonus',
+  //   to: '/buttons',
+  //   icon: 'cil-cursor',
+  //   items: [
+  //     {
+  //       component: 'CNavItem',
+  //       name: 'Bonus List',
+  //       to: '/buttons/standard-buttons',
+  //     },
+  //     {
+  //       component: 'CNavItem',
+  //       name: 'Bonus History',
+  //       to: '/buttons/button-groups',
+  //     },
+  //     {
+  //       component: 'CNavItem',
+  //       name: 'Create Bonus',
+  //       to: '/buttons/dropdowns',
+  //     },
+  //   ],
+  // },
+  // {
+  //   component: 'CNavGroup',
+  //   name: 'Setting',
+  //   to: '/forms',
+  //   icon: 'cil-notes',
+  //   items: [
+  //     {
+  //       component: 'CNavItem',
+  //       name: 'Global Setting',
+  //       to: '/forms/select',
+  //     },
+  //     {
+  //       component: 'CNavItem',
+  //       name: 'Sport Setting',
+  //       to: '/forms/checks-radios',
+  //     },
+  //     {
+  //       component: 'CNavItem',
+  //       name: 'Series Setting',
+  //       to: '/forms/range',
+  //     },
+  //     {
+  //       component: 'CNavItem',
+  //       name: 'Match Setting',
+  //       to: '/forms/input-group',
+  //     },
+  //     {
+  //       component: 'CNavItem',
+  //       name: 'Market Setting',
+  //       to: '/forms/floating-labels',
+  //     },
+  //     {
+  //       component: 'CNavItem',
+  //       name: 'Fancy Setting',
+  //       to: '/forms/form-control',
+  //     },
+  //     {
+  //       component: 'CNavItem',
+  //       name: 'Banner Setting',
+  //       to: '/forms/banner-setting',
+  //     },
+  //     {
+  //       component: 'CNavItem',
+  //       name: 'Layout',
+  //       to: '/forms/layout',
+  //     },
+  //     {
+  //       component: 'CNavItem',
+  //       name: 'Online User',
+  //       to: '/forms/validation',
+  //     },
+  //   ],
+  // },
+  // {
+  //   component: 'CNavGroup',
+  //   name: 'Icons',
+  //   to: '/icons',
+  //   icon: 'cil-star',
+  //   items: [
+  //     {
+  //       component: 'CNavItem',
+  //       name: 'CoreUI Icons',
+  //       to: '/icons/coreui-icons',
+  //       badge: {
+  //         color: 'info',
+  //         text: 'NEW',
+  //       },
+  //     },
+  //     {
+  //       component: 'CNavItem',
+  //       name: 'Brands',
+  //       to: '/icons/brands',
+  //     },
+  //     {
+  //       component: 'CNavItem',
+  //       name: 'Flags',
+  //       to: '/icons/flags',
+  //     },
+  //   ],
+  // },
+  // {
+  //   component: 'CNavGroup',
+  //   name: 'Notifications',
+  //   to: '/notifications',
+  //   icon: 'cil-bell',
+  //   items: [
+  //     {
+  //       component: 'CNavItem',
+  //       name: 'Alerts',
+  //       to: '/notifications/alerts',
+  //     },
+  //     {
+  //       component: 'CNavItem',
+  //       name: 'Badges',
+  //       to: '/notifications/badges',
+  //     },
+  //     {
+  //       component: 'CNavItem',
+  //       name: 'Modals',
+  //       to: '/notifications/modals',
+  //     },
+  //     {
+  //       component: 'CNavItem',
+  //       name: 'Toasts',
+  //       to: '/notifications/toasts',
+  //     },
+  //   ],
+  // },
+  // {
+  //   component: 'CNavItem',
+  //   name: 'Widgets',
+  //   to: '/widgets',
+  //   icon: 'cil-calculator',
+  //   badge: {
+  //     color: 'primary',
+  //     text: 'NEW',
+  //     shape: 'pill',
+  //   },
+  // },
+  // {
+  //   component: 'CNavTitle',
+  //   name: 'Extras',
+  // },
+  // {
+  //   component: 'CNavGroup',
+  //   name: 'Pages',
+  //   to: '/pages',
+  //   icon: 'cil-star',
+  //   items: [
+  //     {
+  //       component: 'CNavItem',
+  //       name: 'Login',
+  //       to: '/pages/login',
+  //     },
+  //     {
+  //       component: 'CNavItem',
+  //       name: 'Register',
+  //       to: '/pages/register',
+  //     },
+  //     {
+  //       component: 'CNavItem',
+  //       name: 'Error 404',
+  //       to: '/pages/404',
+  //     },
+  //     {
+  //       component: 'CNavItem',
+  //       name: 'Error 500',
+  //       to: '/pages/500',
+  //     },
+  //   ],
+  // },
 ]
