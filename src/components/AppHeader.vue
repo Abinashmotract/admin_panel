@@ -31,28 +31,28 @@ onMounted(() => {
         <CNavItem>
           <CNavLink href="/dashboard"> Dashboard </CNavLink>
         </CNavItem>
-        <CNavItem>
+        <!-- <CNavItem>
           <CNavLink href="#">Users</CNavLink>
         </CNavItem>
         <CNavItem>
           <CNavLink href="#">Settings</CNavLink>
-        </CNavItem>
+        </CNavItem> -->
       </CHeaderNav>
       <CHeaderNav class="ms-auto">
         <CNavItem>
-          <CNavLink href="#">
+          <!-- <CNavLink href="#">
             <CIcon icon="cil-bell" size="lg" />
-          </CNavLink>
+          </CNavLink> -->
         </CNavItem>
         <CNavItem>
-          <CNavLink href="#">
+          <!-- <CNavLink href="#">
             <CIcon icon="cil-list" size="lg" />
-          </CNavLink>
+          </CNavLink> -->
         </CNavItem>
         <CNavItem>
-          <CNavLink href="#">
+          <!-- <CNavLink href="#">
             <CIcon icon="cil-envelope-open" size="lg" />
-          </CNavLink>
+          </CNavLink> -->
         </CNavItem>
       </CHeaderNav>
       <CHeaderNav>
@@ -66,31 +66,16 @@ onMounted(() => {
             <CIcon v-else icon="cil-contrast" size="lg" />
           </CDropdownToggle>
           <CDropdownMenu>
-            <CDropdownItem
-              :active="colorMode === 'light'"
-              class="d-flex align-items-center"
-              component="button"
-              type="button"
-              @click="setColorMode('light')"
-            >
+            <CDropdownItem :active="colorMode === 'light'" class="d-flex align-items-center" component="button"
+              type="button" @click="setColorMode('light')">
               <CIcon class="me-2" icon="cil-sun" size="lg" /> Light
             </CDropdownItem>
-            <CDropdownItem
-              :active="colorMode === 'dark'"
-              class="d-flex align-items-center"
-              component="button"
-              type="button"
-              @click="setColorMode('dark')"
-            >
+            <CDropdownItem :active="colorMode === 'dark'" class="d-flex align-items-center" component="button"
+              type="button" @click="setColorMode('dark')">
               <CIcon class="me-2" icon="cil-moon" size="lg" /> Dark
             </CDropdownItem>
-            <CDropdownItem
-              :active="colorMode === 'auto'"
-              class="d-flex align-items-center"
-              component="button"
-              type="button"
-              @click="setColorMode('auto')"
-            >
+            <CDropdownItem :active="colorMode === 'auto'" class="d-flex align-items-center" component="button"
+              type="button" @click="setColorMode('auto')">
               <CIcon class="me-2" icon="cil-contrast" size="lg" /> Auto
             </CDropdownItem>
           </CDropdownMenu>

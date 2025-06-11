@@ -14,21 +14,27 @@
             using relative font sizing and <code>em</code> units.
           </p>
           <DocsExample href="components/badge.html">
-            <h1>Example heading <CBadge color="secondary">New</CBadge></h1>
-            <h2>Example heading <CBadge color="secondary">New</CBadge></h2>
-            <h3>Example heading <CBadge color="secondary">New</CBadge></h3>
-            <h4>Example heading <CBadge color="secondary">New</CBadge></h4>
-            <h5>Example heading <CBadge color="secondary">New</CBadge></h5>
-            <h6>Example heading <CBadge color="secondary">New</CBadge></h6>
+            <h1>Example heading <CBadge color="secondary">New</CBadge>
+            </h1>
+            <h2>Example heading <CBadge color="secondary">New</CBadge>
+            </h2>
+            <h3>Example heading <CBadge color="secondary">New</CBadge>
+            </h3>
+            <h4>Example heading <CBadge color="secondary">New</CBadge>
+            </h4>
+            <h5>Example heading <CBadge color="secondary">New</CBadge>
+            </h5>
+            <h6>Example heading <CBadge color="secondary">New</CBadge>
+            </h6>
           </DocsExample>
           <p class="text-body-secondary small">
             Badges can be used as part of links or buttons to provide a counter.
           </p>
-          <DocsExample href="components/badge.html">
+          <!-- <DocsExample href="components/badge.html">
             <CButton color="primary">
               Notifications <CBadge color="secondary">4</CBadge>
             </CButton>
-          </DocsExample>
+          </DocsExample> -->
           <p class="text-body-secondary small">
             Remark that depending on how you use them, badges may be complicated
             for users of screen readers and related assistive technologies.
