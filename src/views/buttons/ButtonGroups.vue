@@ -52,60 +52,52 @@
   </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      search: '',
-      entries: 50,
-      bonuses: [
-        {
-          name: 'referal',
-          amount: 500,
-          type: 'FIXED AMOUNT',
-          date: '2025-01-30 02:07:10',
-        },
-        {
-          name: 'signup',
-          amount: 500,
-          type: 'FIXED AMOUNT',
-          date: '2025-01-30 02:08:01',
-        },
-      ],
-    };
+<script setup>
+import { ref, computed } from 'vue'
+
+const vStartDate = ref('')
+const vEndDate = ref('')
+const search = ref('')
+const entries = ref(50)
+
+const bonuses = ref([
+  {
+    name: 'referal',
+    amount: 500,
+    type: 'FIXED AMOUNT',
+    date: '2025-01-30 02:07:10',
   },
-  computed: {
-    filteredBonuses() {
-      return this.bonuses
-        .filter((bonus) =>
-          Object.values(bonus).some((val) =>
-            String(val).toLowerCase().includes(this.search.toLowerCase())
-          )
-        )
-        .slice(0, this.entries);
-    },
+  {
+    name: 'signup',
+    amount: 500,
+    type: 'FIXED AMOUNT',
+    date: '2025-01-30 02:08:01',
   },
-  methods: {
-    loadData() {
-      console.log('Load triggered for date:', this.dateRange);
-      // Add your actual data loading logic here
-    },
-    resetData() {
-      this.dateRange = '';
-      this.search = '';
-      this.entries = 50;
-    },
-  },
-};
-const vStartDate = ref(new Date(2022, 2, 1))
-const vEndDate = ref(new Date(2022, 2, 7))
-const options = {
-  year: 'numeric',
-  month: 'long',
-  day: 'numeric',
-  weekday: 'long',
+])
+
+const filteredBonuses = computed(() => {
+  return bonuses.value
+    .filter(bonus =>
+      Object.values(bonus).some(val =>
+        String(val).toLowerCase().includes(search.value.toLowerCase())
+      )
+    )
+    .slice(0, entries.value)
+})
+
+function loadData() {
+  console.log('Load triggered for date:', vStartDate.value, 'to', vEndDate.value)
+  // add API call or other logic here
+}
+
+function resetData() {
+  vStartDate.value = ''
+  vEndDate.value = ''
+  search.value = ''
+  entries.value = 50
 }
 </script>
+
 
 <style scoped>
 input.form-control {

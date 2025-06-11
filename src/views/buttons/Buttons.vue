@@ -4,9 +4,11 @@
     <CCard class="p-4 charts-card">
       <div class="d-flex justify-content-between align-items-center mb-3">
         <h5 class="mb-0">Bonus Detail</h5>
-        <CButton color="success" class="text-white">
-          <CIcon icon="cil-plus" class="me-1" /> ADD Bonus
-        </CButton>
+        <RouterLink to="/buttons/dropdowns">
+          <CButton color="success" class="text-white">
+            <CIcon icon="cil-plus" class="me-1" /> ADD Bonus
+          </CButton>
+        </RouterLink>
       </div>
 
       <CTable hover bordered align="middle">

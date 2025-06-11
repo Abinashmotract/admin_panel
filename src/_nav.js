@@ -192,34 +192,28 @@ export default [
   },
   {
     component: 'CNavGroup',
-    name: 'Forms',
+    name: 'Setting',
     to: '/forms',
     icon: 'cil-notes',
     items: [
       {
         component: 'CNavItem',
-        name: 'Form Control',
-        to: '/forms/form-control',
-      },
-      {
-        component: 'CNavItem',
-        name: 'Select',
+        name: 'Global Setting',
         to: '/forms/select',
       },
       {
         component: 'CNavItem',
-        name: 'Checks & Radios',
+        name: 'Sport Setting',
         to: '/forms/checks-radios',
       },
       {
         component: 'CNavItem',
-        name: 'Range',
+        name: 'Series Setting',
         to: '/forms/range',
       },
       {
         component: 'CNavItem',
-        name: 'Range Slider',
-        href: 'https://coreui.io/vue/docs/forms/range-slider.html',
+        name: 'Match Setting',
         external: true,
         badge: {
           color: 'danger',
@@ -228,18 +222,17 @@ export default [
       },
       {
         component: 'CNavItem',
-        name: 'Input Group',
+        name: 'Market Setting',
         to: '/forms/input-group',
       },
       {
         component: 'CNavItem',
-        name: 'Floating Labels',
+        name: 'Account Setting',
         to: '/forms/floating-labels',
       },
       {
         component: 'CNavItem',
-        name: 'Date Picker',
-        href: 'https://coreui.io/vue/docs/forms/date-picker.html',
+        name: 'Online User',
         external: true,
         badge: {
           color: 'danger',
@@ -248,12 +241,16 @@ export default [
       },
       {
         component: 'CNavItem',
-        name: 'Date Range Picker',
-        href: 'https://coreui.io/vue/docs/forms/date-range-picker.html',
+        name: 'Banner Setting',
         badge: {
           color: 'danger',
           text: 'PRO',
         },
+      },
+      {
+        component: 'CNavItem',
+        name: 'Fancy Setting',
+        to: '/forms/form-control',
       },
       {
         component: 'CNavItem',
