@@ -42,12 +42,12 @@ const handleSubmit = () => {
 
 <template>
   <div class="mb-3">
-    <h6 class="fw-bold ps-3 py-3">MULTI LOGIN ACCOUNT</h6>
+    <h6 class="fw-bold">MULTI LOGIN ACCOUNT</h6>
     <CCard class="multi-login-account p-2">
       <CCardBody class="create-account-form">
         <CForm>
           <!-- Personal Info -->
-          <div class="border rounded p-3 mb-3">
+          <div class="border rounded p-2 mb-3">
             <h6 class="fw-semibold">Personal Information</h6>
             <CRow class="mt-2">
               <CCol :md="3">
@@ -70,7 +70,7 @@ const handleSubmit = () => {
           </div>
 
           <!-- Privileges -->
-          <div class="rounded p-3 mb-1">
+          <div class="rounded p-2 mb-1">
             <h6 class="fw-semibold">Privileges</h6>
             <CRow class="previlage-box">
               <CCol :md="2" v-for="(item, idx) in privileges" :key="idx">
@@ -89,59 +89,57 @@ const handleSubmit = () => {
               </div>
             </CCol>
             <CCol :md="1">
-              <CButton color="success" class="w-100" @click="handleSubmit">Submit</CButton>
+              <CButton color="success" @click="handleSubmit">Submit</CButton>
             </CCol>
             <CCol :md="1">
-              <CButton color="light" class="w-100">Reset</CButton>
+              <CButton color="light">Reset</CButton>
             </CCol>
           </CRow>
 
         </CForm>
       </CCardBody>
 
-      <div class="rounded p-3 mt-3">
-        <CTable striped hover>
-          <CTableHead>
-            <CTableRow>
-              <CTableHeaderCell>Action</CTableHeaderCell>
-              <CTableHeaderCell>Username</CTableHeaderCell>
-              <CTableHeaderCell>Full Name</CTableHeaderCell>
-              <CTableHeaderCell>DashBoard</CTableHeaderCell>
-              <CTableHeaderCell>Market Analysis</CTableHeaderCell>
-              <CTableHeaderCell>User List</CTableHeaderCell>
-              <CTableHeaderCell>Insert User</CTableHeaderCell>
-              <CTableHeaderCell>Account list for active users</CTableHeaderCell>
-              <CTableHeaderCell>Bank</CTableHeaderCell>
-              <CTableHeaderCell>Account Statement</CTableHeaderCell>
-              <CTableHeaderCell>Party Win Loss</CTableHeaderCell>
-              <CTableHeaderCell>Current Bets</CTableHeaderCell>
-              <CTableHeaderCell>User History</CTableHeaderCell>
-              <!-- Add more headers if needed -->
-            </CTableRow>
-          </CTableHead>
-          <CTableBody>
-            <CTableRow>
-              <CTableDataCell>Edit</CTableDataCell>
-              <CTableDataCell>john_doe</CTableDataCell>
-              <CTableDataCell>John Doe</CTableDataCell>
-              <CTableDataCell>✓</CTableDataCell>
-              <CTableDataCell>✓</CTableDataCell>
-              <CTableDataCell>✓</CTableDataCell>
-              <CTableDataCell>✓</CTableDataCell>
-              <CTableDataCell>✓</CTableDataCell>
-              <CTableDataCell>✓</CTableDataCell>
-              <CTableDataCell>✓</CTableDataCell>
-              <CTableDataCell>✓</CTableDataCell>
-              <CTableDataCell>✓</CTableDataCell>
-              <CTableDataCell>✓</CTableDataCell>
-            </CTableRow>
-          </CTableBody>
-        </CTable>
-      </div>
+    <div class="table-container rounded p-2 mt-3">
+    <div class="table-scroll-wrapper">
+      <CTable striped hover class="custom-table">
+        <CTableHead>
+          <CTableRow>
+            <CTableHeaderCell class="sticky-col col-1">Action</CTableHeaderCell>
+            <CTableHeaderCell class="sticky-col col-2">Username</CTableHeaderCell>
+            <CTableHeaderCell class="sticky-col col-3">Full Name</CTableHeaderCell>
+            <CTableHeaderCell>DashBoard</CTableHeaderCell>
+            <CTableHeaderCell>Market Analysis</CTableHeaderCell>
+            <CTableHeaderCell>User List</CTableHeaderCell>
+            <CTableHeaderCell>Insert User</CTableHeaderCell>
+            <CTableHeaderCell>Account list for active users</CTableHeaderCell>
+            <CTableHeaderCell>Bank</CTableHeaderCell>
+            <CTableHeaderCell>Account Statement</CTableHeaderCell>
+            <CTableHeaderCell>Party Win Loss</CTableHeaderCell>
+            <CTableHeaderCell>Current Bets</CTableHeaderCell>
+            <CTableHeaderCell>User History</CTableHeaderCell>
+          </CTableRow>
+        </CTableHead>
+        <CTableBody>
+          <CTableRow>
+            <CTableDataCell class="sticky-col col-1">Edit</CTableDataCell>
+            <CTableDataCell class="sticky-col col-2">john_doe</CTableDataCell>
+            <CTableDataCell class="sticky-col col-3">John Doe</CTableDataCell>
+            <CTableDataCell>Yes</CTableDataCell>
+            <CTableDataCell>Yes</CTableDataCell>
+            <CTableDataCell>Yes</CTableDataCell>
+            <CTableDataCell>Yes</CTableDataCell>
+            <CTableDataCell>Yes</CTableDataCell>
+            <CTableDataCell>Yes</CTableDataCell>
+            <CTableDataCell>Yes</CTableDataCell>
+            <CTableDataCell>Yes</CTableDataCell>
+            <CTableDataCell>Yes</CTableDataCell>
+            <CTableDataCell>Yes</CTableDataCell>
+          </CTableRow>
+        </CTableBody>
+      </CTable>
+    </div>
+  </div>
     </CCard>
-
-    <!-- Table -->
-
   </div>
 </template>
 
@@ -166,17 +164,50 @@ const handleSubmit = () => {
 
 .previlage-box {
   background-color: #ececec;
-  border: 1px solid #ddd;
+  /* border: 1px solid #ddd; */
   display: flex;
   flex-wrap: wrap;
-  padding: 10px;
+  padding: 5px;
 }
 
 .form-check-wrapper {
   display: block;
-  min-height: 1.5rem;
+  font-weight: 500;
+  /* min-height: 1.5rem; */
   padding-inline-start: 0em;
   margin-bottom: 0rem;
-  font-size: 14px;
+  font-size: 12px;
+}
+
+
+.table-scroll-wrapper {
+  overflow-x: auto;
+  width: 100%;
+}
+
+.custom-table {
+  min-width: 1400px; /* Enough width to allow scrolling */
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+/* Sticky columns base style */
+.sticky-col {
+  position: sticky;
+  left: 0;
+  background-color: white;
+  z-index: 2;
+  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Specific offsets based on column widths */
+.col-1 { left: 0; width: 100px; }
+.col-2 { left: 100px; width: 150px; }
+.col-3 { left: 250px; width: 150px; }
+
+/* Optional: Adjust all cell spacing */
+.custom-table th, .custom-table td {
+  white-space: nowrap;
+  padding: 0.75rem 1rem;
 }
 </style>

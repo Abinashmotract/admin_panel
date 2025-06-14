@@ -1,32 +1,23 @@
 <template>
   <div>
-    <h5 class="fw-bold mb-3">PARTY WIN LOSS</h5>
-    <CCard class="p-3 charts-card">
+    <h5 class="fw-bold">PARTY WIN LOSS</h5>
+    <CCard class="charts-card">
       <div class="d-flex gap-4 mb-4">
         <div>
           <!-- <h6 class="fw-bold mb-1">Search By Client Name</h6> -->
-          <CFormSelect size="sm" class="mb-3" style="width: 200px" aria-label="Small select example custom-select">
+          <CFormSelect size="sm" class="" style="width: 200px" aria-label="Small select example custom-select">
             <option>All</option>
             <option value="football">User</option>
-            <!-- <option value="cricket">Cricket</option>
-            <option value="tennis">Tennis</option> -->
           </CFormSelect>
         </div>
-        <div class="d-flex gap-2 align-items-end mb-32">
-          <CButton color="dark" @click="loadData">Load</CButton>
-          <CButton color="light" @click="resetData">Reset</CButton>
-          <CButton color="light" @click="resetData">Pdf</CButton>
-          <CButton color="light" @click="resetData">Pdf</CButton>
+        <div class="d-flex gap-2 align-items-end">
+         <CButton color="dark" size="sm" @click="loadData">Load</CButton>
+          <CButton color="light" size="sm" @click="resetData">Reset</CButton>
+          <CButton color="light" size="sm" @click="downloadPdf">Pdf</CButton>
+          <CButton color="light" size="sm" @click="downloadPdf">Pdf</CButton>
         </div>
       </div>
       <div class="d-flex justify-content-end align-items-center mb-2">
-        <!-- <div class="d-flex align-items-center gap-2">
-          <label>Show</label>
-          <select v-model="entries" class="form-select w-auto">
-            <option v-for="n in [10, 25, 50, 100]" :key="n" :value="n">{{ n }}</option>
-          </select>
-          <label>entries</label>
-        </div> -->
         <input type="text" v-model="search" class="form-control w-auto" placeholder="Search..." />
       </div>
       <CTable hover bordered responsive>

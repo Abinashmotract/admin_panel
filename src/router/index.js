@@ -242,6 +242,16 @@ const routes = [
             name: 'Flags',
             component: () => import('@/views/icons/Flags.vue'),
           },
+          {
+            path: '/icons/user-history',
+            name: 'User History',
+            component: () => import('@/views/icons/UserHistory.vue'),
+          },
+           {
+            path: '/icons/ggr-reports',
+            name: 'GGR Reports',
+            component: () => import('@/views/icons/GgrReports.vue'),
+          },
         ],
       },
       {

@@ -10,8 +10,8 @@
             v-model:end-date="vEndDate" />
         </div>
         <div class="d-flex gap-2 align-items-end">
-          <CButton color="dark" @click="loadData">Load</CButton>
-          <CButton color="light" @click="resetData">Reset</CButton>
+         <CButton color="dark" size="sm" @click="loadData">Load</CButton>
+          <CButton color="light" size="sm" @click="resetData">Reset</CButton>
         </div>
       </div>
 

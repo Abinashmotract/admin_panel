@@ -1,5 +1,6 @@
 <template>
-  <div class="mt-3">
+  <div class="">
+    <h5 class="fw-bold">CURRENT BETS</h5>
     <CNav variant="tabs" class="mb-3">
       <CNavLink :active="activeTab === 'sport'" @click="activeTab = 'sport'" role="button">
         Sport
@@ -32,9 +33,15 @@
           <label class="form-check-label" for="lay">Lay</label>
         </div>
 
-        <CButton color="dark">Load</CButton>
+        <!-- <CButton color="dark">Load</CButton>
         <CButton color="success"><i class="bi bi-file-earmark-excel"></i></CButton>
-        <CButton color="danger"><i class="bi bi-file-earmark-pdf"></i></CButton>
+        <CButton color="danger"><i class="bi bi-file-earmark-pdf"></i></CButton> -->
+        <div class="d-flex gap-2 align-items-end">
+          <CButton color="dark" size="sm" @click="loadData">Load</CButton>
+          <CButton color="light" size="sm" @click="resetData">Reset</CButton>
+          <CButton color="light" size="sm" @click="downloadPdf">Pdf</CButton>
+          <CButton color="light" size="sm" @click="downloadPdf">Pdf</CButton>
+        </div>
 
         <div class="ms-auto">
           <strong>Total Soda:</strong> 0 &nbsp;&nbsp; <strong>Total Amount:</strong> 0

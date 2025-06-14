@@ -55,11 +55,12 @@
               <CFormInput v-model="login.password" type="password" placeholder="Enter password"
                 class="form-control-lg" />
             </div>
-
-            <CButton type="submit" class="w-100 py-2"
-              style="background-color: #ffeb00; color: black; font-weight: 500; border: none;">
-              Sign In
-            </CButton>
+            <RouterLink to="/dashboard">
+              <CButton type="submit" class="w-100 py-2"
+                style="background-color: #ffeb00; color: black; font-weight: 500; border: none;">
+                Sign In
+              </CButton>
+            </RouterLink>
           </CForm>
           <div class="mt-3" style="font-size: 12px; color: rgba(116,120,141)">
             This site is protected by reCAPTCHA and the Google

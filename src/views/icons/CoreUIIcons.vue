@@ -32,10 +32,10 @@
         </div>
       </div>
       <div class="d-flex gap-2 align-items-end mb-4">
-        <CButton color="dark" @click="loadData">Load</CButton>
-        <CButton color="light" @click="resetData">Reset</CButton>
-        <CButton color="light" @click="resetData">Pdf</CButton>
-        <CButton color="light" @click="resetData">Pdf</CButton>
+       <CButton color="dark" size="sm" @click="loadData">Load</CButton>
+        <CButton color="light" size="sm" @click="resetData">Reset</CButton>
+        <CButton color="light" size="sm" @click="downloadPdf">Pdf</CButton>
+        <CButton color="light" size="sm" @click="downloadPdf">Pdf</CButton>
       </div>
       <div class="d-flex justify-content-between align-items-center mb-2">
         <div class="d-flex align-items-center gap-2">

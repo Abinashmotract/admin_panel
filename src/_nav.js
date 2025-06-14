@@ -253,6 +253,16 @@ export default [
         name: 'Current Bets',
         to: '/icons/flags',
       },
+      {
+        component: 'CNavItem',
+        name: 'User History',
+        to: '/icons/user-history',
+      },
+       {
+        component: 'CNavItem',
+        name: 'GGR Reports',
+        to: '/icons/ggr-reports',
+      },
     ],
   },
   {
