@@ -1,10 +1,10 @@
 <script setup>
-import { onBeforeMount } from 'vue'
+import { onBeforeMount, watch } from 'vue'
 import { useColorModes } from '@coreui/vue'
 
 import { useThemeStore } from '@/stores/theme.js'
 
-const { isColorModeSet, setColorMode } = useColorModes(
+const { isColorModeSet, setColorMode, colorMode } = useColorModes(
   'coreui-free-vue-admin-template-theme',
 )
 const currentTheme = useThemeStore()
@@ -28,10 +28,15 @@ onBeforeMount(() => {
 
   setColorMode(currentTheme.theme)
 })
+// watch(colorMode, (val) => {
+//   vuetify.theme.global.name.value = val === 'dark' ? 'darkTheme' : 'lightTheme'
+// })
 </script>
-
+<!-- :class="`bg-${colorMode}`" -->
 <template>
-  <router-view />
+  <v-app>
+    <router-view />
+  </v-app>
 </template>
 
 <style lang="scss">

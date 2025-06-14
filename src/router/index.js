@@ -8,7 +8,7 @@ const routes = [
     path: '/',
     name: 'Home',
     component: DefaultLayout,
-    redirect: '/dashboard',
+    redirect: '/pages/login',
     children: [
       {
         path: '/dashboard',
@@ -164,6 +164,11 @@ const routes = [
             path: '/forms/banner-setting',
             name: 'Banner Setting',
             component: () => import('@/views/forms/BannerSetting.vue'),
+          },
+          {
+            path: '/forms/market-rollback',
+            name: 'Market Rollback',
+            component: () => import('@/views/forms/MarketRollback.vue'),
           },
           {
             path: '/forms/form-control',

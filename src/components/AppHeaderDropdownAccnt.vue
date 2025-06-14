@@ -51,7 +51,9 @@ const itemsCount = 42
         <CIcon icon="cil-shield-alt" /> Lock Account
       </CDropdownItem> -->
       <CDropdownItem>
-        <CIcon icon="cil-lock-locked" /> Logout
+        <RouterLink to="/">
+          <CIcon icon="cil-lock-locked" /> Logout
+        </RouterLink>
       </CDropdownItem>
     </CDropdownMenu>
   </CDropdown>

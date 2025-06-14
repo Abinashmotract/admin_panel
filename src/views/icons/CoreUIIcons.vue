@@ -1,23 +1,101 @@
-<script setup>
-import { freeSet } from '@coreui/icons'
+<template>
+  <div>
+    <h5 class="fw-bold mb-3">ACCOUNT STATEMENT</h5>
+    <CCard class="p-3 charts-card">
+      <div class="d-flex gap-4 mb-4">
+        <div>
+          <h6 class="fw-bold mb-1">Search By Client Name</h6>
+          <CFormSelect size="sm" class="mb-3" style="width: 200px" aria-label="Small select example custom-select">
+            <option>Open this select menu</option>
+            <option value="football">Football</option>
+            <option value="cricket">Cricket</option>
+            <option value="tennis">Tennis</option>
+          </CFormSelect>
+        </div>
+        <div>
+          <h6 class="fw-bold mb-1">Select Date Range</h6>
+          <CFormSelect size="sm" class="mb-3" style="width: 200px" aria-label="Small select example custom-select">
+            <option>All</option>
+            <option value="india">India</option>
+            <option value="brazil">Brazil</option>
+            <option value="canada">Canada</option>
+          </CFormSelect>
+        </div>
+        <div>
+          <h6 class="fw-bold mb-1">Type</h6>
+          <CFormSelect size="sm" class="mb-3" style="width: 200px" aria-label="Small select example custom-select">
+            <option>All</option>
+            <option value="india">Deposite & Withdrow Report</option>
+            <option value="brazil">Sport Report</option>
+            <option value="canada">Cashino Report</option>
+          </CFormSelect>
+        </div>
+      </div>
+      <div class="d-flex gap-2 align-items-end mb-4">
+        <CButton color="dark" @click="loadData">Load</CButton>
+        <CButton color="light" @click="resetData">Reset</CButton>
+        <CButton color="light" @click="resetData">Pdf</CButton>
+        <CButton color="light" @click="resetData">Pdf</CButton>
+      </div>
+      <div class="d-flex justify-content-between align-items-center mb-2">
+        <div class="d-flex align-items-center gap-2">
+          <label>Show</label>
+          <select v-model="entries" class="form-select w-auto">
+            <option v-for="n in [10, 25, 50, 100]" :key="n" :value="n">{{ n }}</option>
+          </select>
+          <label>entries</label>
+        </div>
+        <input type="text" v-model="search" class="form-control w-auto" placeholder="Search..." />
+      </div>
+      <CTable hover bordered responsive>
+        <CTableHead>
+          <CTableRow>
+            <CTableHeaderCell>Date</CTableHeaderCell>
+            <CTableHeaderCell>Sr No</CTableHeaderCell>
+            <CTableHeaderCell>Credit</CTableHeaderCell>
+            <CTableHeaderCell>Debit</CTableHeaderCell>
+            <CTableHeaderCell>Pts</CTableHeaderCell>
+            <CTableHeaderCell>Remark</CTableHeaderCell>
+            <CTableHeaderCell>Fromto</CTableHeaderCell>
+          </CTableRow>
+        </CTableHead>
+        <CTableBody>
+          <CTableRow v-for="(sport, index) in sports" :key="index">
+            <CTableDataCell></CTableDataCell>
+            <CTableDataCell>{{ sport.soprt_name }}</CTableDataCell>
+            <CTableDataCell>{{ sport.series_name }}</CTableDataCell>
+            <CTableDataCell>{{ sport.match_name }}</CTableDataCell>
+            <CTableDataCell>{{ sport.match_date }}</CTableDataCell>
+            <CTableDataCell>{{ sport.market_name }}</CTableDataCell>
+            <CTableDataCell>{{ sport.market_id }}</CTableDataCell>
+          </CTableRow>
+        </CTableBody>
+      </CTable>
+    </CCard>
+  </div>
+</template>
 
-const toKebabCase = (str) => str.replace(/([a-z])([A-Z0-9])/g, '$1-$2').toLowerCase()
-const icons = freeSet
+<script setup>
+import { ref } from 'vue'
+
+const sports = ref([
+  { soprt_name: 1, series_name: 0, match_name: 0, match_date: 0, market_name: "opening balance", market_id: "/" },
+])
 </script>
 
-<template>
-  <DocsIcons />
-  <CCard>
-    <CCardHeader>CoreUI Icons Free</CCardHeader>
-    <CCardBody>
-      <CRow class="text-center">
-        <template v-for="(icon, iconName) in icons" :key="iconName">
-          <CCol class="mb-5" :xs="3" :sm="2">
-            <CIcon :content="icon" size="xxl" />
-            <div>{{ toKebabCase(iconName) }}</div>
-          </CCol>
-        </template>
-      </CRow>
-    </CCardBody>
-  </CCard>
-</template>
+<style scoped>
+.charts-card {
+  box-shadow: 0 0.75rem 1.5rem rgba(18, 38, 63, 0.03);
+  border: none !important;
+}
+
+.fw-bold {
+  font-weight: 600;
+}
+
+::v-deep(.custom-select:focus) {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: #ced4da !important;
+}
+</style>

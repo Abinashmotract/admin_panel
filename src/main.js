@@ -1,5 +1,10 @@
+// src/main.js
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
+
+import vuetify from './plugins/vuetify'
+import '@coreui/coreui/dist/css/coreui.min.css'
+// import '@mdi/font/css/materialdesignicons.css';
 
 import App from './App.vue'
 import router from './router'
@@ -12,10 +17,13 @@ import DocsExample from '@/components/DocsExample'
 import DocsIcons from '@/components/DocsIcons'
 
 const app = createApp(App)
+
 app.use(createPinia())
 app.use(router)
 app.use(CoreuiVue)
+app.use(vuetify) // ✅ Vuetify must be used BEFORE mount
 app.provide('icons', icons)
+
 app.component('CIcon', CIcon)
 app.component('DocsComponents', DocsComponents)
 app.component('DocsExample', DocsExample)
