@@ -1,5 +1,5 @@
 <script setup>
-import { onBeforeMount, watch } from 'vue'
+import { onBeforeMount, onMounted } from 'vue'
 import { useColorModes } from '@coreui/vue'
 
 import { useThemeStore } from '@/stores/theme.js'
@@ -28,9 +28,25 @@ onBeforeMount(() => {
 
   setColorMode(currentTheme.theme)
 })
-// watch(colorMode, (val) => {
-//   vuetify.theme.global.name.value = val === 'dark' ? 'darkTheme' : 'lightTheme'
-// })
+
+onMounted(() => {
+  document.addEventListener('contextmenu', (e) => e.preventDefault())
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'F12' ||
+      (e.ctrlKey && e.shiftKey && ['I', 'J', 'C'].includes(e.key)) ||
+      (e.ctrlKey && e.key === 'u')) {
+      e.preventDefault()
+    }
+  })
+  setInterval(function () {
+    const start = performance.now()
+    debugger
+    const end = performance.now()
+    if (end - start > 100) {
+      window.location.href = "about:blank"
+    }
+  }, 1000)
+})
 </script>
 <!-- :class="`bg-${colorMode}`" -->
 <template>

@@ -30,3 +30,24 @@ app.component('DocsExample', DocsExample)
 app.component('DocsIcons', DocsIcons)
 
 app.mount('#app')
+
+document.addEventListener('contextmenu', (e) => e.preventDefault())
+
+document.addEventListener('keydown', (e) => {
+  if (
+    e.key === 'F12' ||
+    (e.ctrlKey && e.shiftKey && ['I', 'J', 'C'].includes(e.key.toUpperCase())) ||
+    (e.ctrlKey && e.key.toLowerCase() === 'u')
+  ) {
+    e.preventDefault()
+  }
+})
+
+setInterval(() => {
+  const start = performance.now()
+  debugger
+  const end = performance.now()
+  if (end - start > 100) {
+    window.location.href = 'about:blank'
+  }
+}, 1000)
