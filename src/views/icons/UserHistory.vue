@@ -34,8 +34,15 @@
                 <div class="d-flex gap-2 align-items-end">
                     <CButton color="dark" size="sm" @click="loadData">Load</CButton>
                     <CButton color="light" size="sm" @click="resetData">Reset</CButton>
-                    <CButton color="light" size="sm" @click="downloadPdf">Pdf</CButton>
-                    <CButton color="light" size="sm" @click="downloadPdf">Pdf</CButton>
+                    <CButton color="success"
+                        style="width: 30px; height: 30px; border-radius: 4px; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-file-excel fa-sm text-white"></i>
+                    </CButton>
+
+                    <CButton color="danger"
+                        style="width: 30px; height: 30px; border-radius: 4px; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-file-pdf fa-sm text-white"></i>
+                    </CButton>
                 </div>
             </div>
 
@@ -100,8 +107,14 @@
                     <div class="d-flex gap-2 align-items-end">
                         <CButton color="dark" size="sm" @click="loadData">Load</CButton>
                         <CButton color="light" size="sm" @click="resetData">Reset</CButton>
-                        <CButton color="light" size="sm" @click="downloadPdf">Pdf</CButton>
-                        <CButton color="light" size="sm" @click="downloadPdf">Pdf</CButton>
+                        <CButton color="success"
+                            style="width: 30px; height: 30px; border-radius: 4px; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-file-excel fa-sm text-white"></i>
+                        </CButton>
+                        <CButton color="success"
+                            style="width: 30px; height: 30px; border-radius: 4px; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-file-excel fa-sm text-white"></i>
+                        </CButton>
                     </div>
                 </div>
 

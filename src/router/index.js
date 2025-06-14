@@ -17,9 +17,7 @@ const routes = [
         // this generates a separate chunk (about.[hash].js) for this route
         // which is lazy-loaded when the route is visited.
         component: () =>
-          import(
-            /* webpackChunkName: "dashboard" */ '@/views/dashboard/Dashboard.vue'
-          ),
+          import(/* webpackChunkName: "dashboard" */ '@/views/dashboard/Dashboard.vue'),
       },
       {
         path: '/theme',
@@ -247,10 +245,30 @@ const routes = [
             name: 'User History',
             component: () => import('@/views/icons/UserHistory.vue'),
           },
-           {
+          {
             path: '/icons/ggr-reports',
             name: 'GGR Reports',
             component: () => import('@/views/icons/GgrReports.vue'),
+          },
+           {
+            path: '/icons/signup-user',
+            name: 'Signup User',
+            component: () => import('@/views/icons/SignupUser.vue'),
+          },
+          {
+            path: '/icons/general-lock',
+            name: 'General Lock',
+            component: () => import('@/views/icons/GeneralLock.vue'),
+          },
+          {
+            path: '/icons/our-casino-result',
+            name: 'Our Casino Result',
+            component: () => import('@/views/icons/OurCasinoResult.vue'),
+          },
+           {
+            path: '/icons/live-casino-result',
+            name: 'Live Casino Result',
+            component: () => import('@/views/icons/LiveCasinoResult.vue'),
           },
         ],
       },

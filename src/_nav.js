@@ -258,82 +258,97 @@ export default [
         name: 'User History',
         to: '/icons/user-history',
       },
-       {
+      {
         component: 'CNavItem',
         name: 'GGR Reports',
         to: '/icons/ggr-reports',
       },
-    ],
-  },
-  {
-    component: 'CNavGroup',
-    name: 'Notifications',
-    to: '/notifications',
-    icon: 'cil-bell',
-    items: [
       {
         component: 'CNavItem',
-        name: 'Alerts',
-        to: '/notifications/alerts',
+        name: 'Signup User',
+        to: '/icons/signup-user',
       },
       {
         component: 'CNavItem',
-        name: 'Badges',
-        to: '/notifications/badges',
+        name: 'General Lock',
+        to: '/icons/general-lock',
       },
       {
         component: 'CNavItem',
-        name: 'Modals',
-        to: '/notifications/modals',
-      },
-      {
-        component: 'CNavItem',
-        name: 'Toasts',
-        to: '/notifications/toasts',
+        name: 'Live Casino Result',
+        to: '/icons/live-casino-result',
       },
     ],
   },
-  {
-    component: 'CNavItem',
-    name: 'Widgets',
-    to: '/widgets',
-    icon: 'cil-calculator',
-    badge: {
-      color: 'primary',
-      text: 'NEW',
-      shape: 'pill',
-    },
-  },
-  {
-    component: 'CNavTitle',
-    name: 'Extras',
-  },
-  {
-    component: 'CNavGroup',
-    name: 'Pages',
-    to: '/pages',
-    icon: 'cil-star',
-    items: [
-      {
-        component: 'CNavItem',
-        name: 'Login',
-        to: '/pages/login',
-      },
-      {
-        component: 'CNavItem',
-        name: 'Register',
-        to: '/pages/register',
-      },
-      {
-        component: 'CNavItem',
-        name: 'Error 404',
-        to: '/pages/404',
-      },
-      {
-        component: 'CNavItem',
-        name: 'Error 500',
-        to: '/pages/500',
-      },
-    ],
-  },
+  // {
+  //   component: 'CNavGroup',
+  //   name: 'Notifications',
+  //   to: '/notifications',
+  //   icon: 'cil-bell',
+  //   items: [
+  //     {
+  //       component: 'CNavItem',
+  //       name: 'Alerts',
+  //       to: '/notifications/alerts',
+  //     },
+  //     {
+  //       component: 'CNavItem',
+  //       name: 'Badges',
+  //       to: '/notifications/badges',
+  //     },
+  //     {
+  //       component: 'CNavItem',
+  //       name: 'Modals',
+  //       to: '/notifications/modals',
+  //     },
+  //     {
+  //       component: 'CNavItem',
+  //       name: 'Toasts',
+  //       to: '/notifications/toasts',
+  //     },
+  //   ],
+  // },
+  // {
+  //   component: 'CNavItem',
+  //   name: 'Widgets',
+  //   to: '/widgets',
+  //   icon: 'cil-calculator',
+  //   badge: {
+  //     color: 'primary',
+  //     text: 'NEW',
+  //     shape: 'pill',
+  //   },
+  // },
+  // {
+  //   component: 'CNavTitle',
+  //   name: 'Extras',
+  // },
+  // {
+  //   component: 'CNavGroup',
+  //   name: 'Pages',
+  //   to: '/pages',
+  //   icon: 'cil-star',
+  //   items: [
+  //     {
+  //       component: 'CNavItem',
+  //       name: 'Login',
+  //       to: '/pages/login',
+  //     },
+  //     {
+  //       component: 'CNavItem',
+  //       name: 'Register',
+  //       to: '/pages/register',
+  //     },
+  //     {
+  //       component: 'CNavItem',
+  //       name: 'Error 404',
+  //       to: '/pages/404',
+  //     },
+  //     {
+  //       component: 'CNavItem',
+  //       name: 'Error 500',
+  //       to: '/pages/500',
+  //     },
+  //   ],
+  // },
 ]

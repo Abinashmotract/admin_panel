@@ -4,14 +4,15 @@ import { createPinia } from 'pinia'
 
 import vuetify from './plugins/vuetify'
 import '@coreui/coreui/dist/css/coreui.min.css'
+import '@fortawesome/fontawesome-free/css/all.min.css'
 // import '@mdi/font/css/materialdesignicons.css';
 
 import App from './App.vue'
 import router from './router'
 
 import CoreuiVue from '@coreui/vue'
-import CIcon from '@coreui/icons-vue'
-import { iconsSet as icons } from '@/assets/icons'
+import { CIcon } from '@coreui/icons-vue'
+import * as iconSet from '@coreui/icons'
 import DocsComponents from '@/components/DocsComponents'
 import DocsExample from '@/components/DocsExample'
 import DocsIcons from '@/components/DocsIcons'
@@ -22,9 +23,8 @@ app.use(createPinia())
 app.use(router)
 app.use(CoreuiVue)
 app.use(vuetify) // ✅ Vuetify must be used BEFORE mount
-app.provide('icons', icons)
-
 app.component('CIcon', CIcon)
+app.provide('icons', iconSet)
 app.component('DocsComponents', DocsComponents)
 app.component('DocsExample', DocsExample)
 app.component('DocsIcons', DocsIcons)
