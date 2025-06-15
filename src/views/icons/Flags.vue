@@ -32,21 +32,17 @@
           <input class="form-check-input" type="radio" id="lay" value="lay" v-model="backlay" />
           <label class="form-check-label" for="lay">Lay</label>
         </div>
-
-        <!-- <CButton color="dark">Load</CButton>
-        <CButton color="success"><i class="bi bi-file-earmark-excel"></i></CButton>
-        <CButton color="danger"><i class="bi bi-file-earmark-pdf"></i></CButton> -->
         <div class="d-flex gap-2 align-items-end">
           <CButton color="dark" size="sm" @click="loadData">Load</CButton>
           <CButton color="light" size="sm" @click="resetData">Reset</CButton>
-           <CButton color="success"
-                        style="width: 30px; height: 30px; border-radius: 4px; display: flex; align-items: center; justify-content: center;">
-                        <i class="fas fa-file-excel fa-sm text-white"></i>
-                    </CButton>
-           <CButton color="success"
-                        style="width: 30px; height: 30px; border-radius: 4px; display: flex; align-items: center; justify-content: center;">
-                        <i class="fas fa-file-excel fa-sm text-white"></i>
-                    </CButton>
+          <CButton color="success"
+            style="width: 30px; height: 30px; border-radius: 4px; display: flex; align-items: center; justify-content: center;">
+            <i class="fas fa-file-excel fa-sm text-white"></i>
+          </CButton>
+          <CButton color="success"
+            style="width: 30px; height: 30px; border-radius: 4px; display: flex; align-items: center; justify-content: center;">
+            <i class="fas fa-file-excel fa-sm text-white"></i>
+          </CButton>
         </div>
 
         <div class="ms-auto">

@@ -30,6 +30,16 @@ const routes = [
         component: () => import('@/views/theme/Colors.vue'),
       },
       {
+        path: '/casino/ourcasino',
+        name: 'Our Casino',
+        component: () => import('@/views/casino/OurCasino.vue'),
+      },
+      {
+        path: '/virtual/virtualcasino',
+        name: 'Virtual Casino',
+        component: () => import('@/views/virtual/VirtualCasino.vue'),
+      },
+      {
         path: '/theme/typography',
         name: 'Typography',
         component: () => import('@/views/theme/Typography.vue'),
@@ -250,7 +260,7 @@ const routes = [
             name: 'GGR Reports',
             component: () => import('@/views/icons/GgrReports.vue'),
           },
-           {
+          {
             path: '/icons/signup-user',
             name: 'Signup User',
             component: () => import('@/views/icons/SignupUser.vue'),
@@ -265,16 +275,36 @@ const routes = [
             name: 'Our Casino Result',
             component: () => import('@/views/icons/OurCasinoResult.vue'),
           },
-           {
+          {
             path: '/icons/live-casino-result',
             name: 'Live Casino Result',
             component: () => import('@/views/icons/LiveCasinoResult.vue'),
+          },
+          {
+            path: '/icons/turn-over',
+            name: 'Turn Over',
+            component: () => import('@/views/icons/TurnOver.vue'),
+          },
+          {
+            path: '/icons/withdraw-statement',
+            name: 'Withdraw Statement',
+            component: () => import('@/views/icons/WithdrawStatement.vue'),
+          },
+          {
+            path: '/icons/deposite-statement',
+            name: 'Deposit Statement',
+            component: () => import('@/views/icons/DepositeStatement.vue'),
+          },
+          {
+            path: '/icons/user-authentication',
+            name: 'User Authentication',
+            component: () => import('@/views/icons/UserAuthentication.vue'),
           },
         ],
       },
       {
         path: '/notifications',
-        name: 'Notifications',
+        name: 'Events',
         component: {
           render() {
             return h(resolveComponent('router-view'))

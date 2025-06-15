@@ -4,10 +4,6 @@ export default [
     name: 'Dashboard',
     to: '/dashboard',
     icon: 'cil-speedometer',
-    badge: {
-      color: 'primary',
-      text: 'NEW',
-    },
   },
   {
     component: 'CNavItem',
@@ -42,105 +38,6 @@ export default [
         name: 'Create Account',
         to: '/base/cards',
       },
-      // {
-      //   component: 'CNavItem',
-      //   name: 'Calendar',
-      //   href: 'https://coreui.io/vue/docs/components/calendar.html',
-      //   external: true,
-      //   badge: {
-      //     color: 'danger',
-      //     text: 'PRO',
-      //   },
-      // },
-      // {
-      //   component: 'CNavItem',
-      //   name: 'Carousels',
-      //   to: '/base/carousels',
-      // },
-      // {
-      //   component: 'CNavItem',
-      //   name: 'Collapses',
-      //   to: '/base/collapses',
-      // },
-      // {
-      //   component: 'CNavItem',
-      //   name: 'List Groups',
-      //   to: '/base/list-groups',
-      // },
-      // {
-      //   component: 'CNavItem',
-      //   name: 'Navs & Tabs',
-      //   to: '/base/navs',
-      // },
-      // {
-      //   component: 'CNavItem',
-      //   name: 'Paginations',
-      //   to: '/base/paginations',
-      // },
-      // {
-      //   component: 'CNavItem',
-      //   name: 'Placeholders',
-      //   to: '/base/placeholders',
-      // },
-      // {
-      //   component: 'CNavItem',
-      //   name: 'Popovers',
-      //   to: '/base/popovers',
-      // },
-      // {
-      //   component: 'CNavItem',
-      //   name: 'Progress',
-      //   to: '/base/progress',
-      // },
-      // {
-      //   component: 'CNavItem',
-      //   name: 'Smart Pagination',
-      //   href: 'https://coreui.io/vue/docs/components/smart-pagination.html',
-      //   badge: {
-      //     color: 'danger',
-      //     text: 'PRO',
-      //   },
-      // },
-      // {
-      //   component: 'CNavItem',
-      //   name: 'Smart Table',
-      //   external: true,
-      //   href: 'https://coreui.io/vue/docs/components/smart-table.html',
-      //   badge: {
-      //     color: 'danger',
-      //     text: 'PRO',
-      //   },
-      // },
-      // {
-      //   component: 'CNavItem',
-      //   name: 'Spinners',
-      //   to: '/base/spinners',
-      // },
-      // {
-      //   component: 'CNavItem',
-      //   name: 'Tables',
-      //   to: '/base/tables',
-      // },
-      // {
-      //   component: 'CNavItem',
-      //   name: 'Tabs',
-      //   to: '/base/tabs',
-      // },
-      // {
-      //   component: 'CNavItem',
-      //   name: 'Tooltips',
-      //   to: '/base/tooltips',
-      // },
-      // {
-      //   component: 'CNavItem',
-      //   name: 'Virtual Scroller',
-      //   href: 'https://coreui.io/vue/docs/components/virtual-scroller.html',
-      //   external: true,
-      //   badge: {
-      //     color: 'danger',
-      //     text: 'PRO',
-      //   },
-      // }
     ],
   },
 
@@ -278,36 +175,45 @@ export default [
         name: 'Live Casino Result',
         to: '/icons/live-casino-result',
       },
+      {
+        component: 'CNavItem',
+        name: 'Turn Over',
+        to: '/icons/turn-over',
+      },
+      {
+        component: 'CNavItem',
+        name: 'Withdraw Statement',
+        to: '/icons/withdraw-statement',
+      },
+      {
+        component: 'CNavItem',
+        name: 'Deposit Statement',
+        to: '/icons/deposite-statement',
+      },
+      {
+        component: 'CNavItem',
+        name: 'User Authentication',
+        to: '/icons/user-authentication',
+      },
     ],
   },
-  // {
-  //   component: 'CNavGroup',
-  //   name: 'Notifications',
-  //   to: '/notifications',
-  //   icon: 'cil-bell',
-  //   items: [
-  //     {
-  //       component: 'CNavItem',
-  //       name: 'Alerts',
-  //       to: '/notifications/alerts',
-  //     },
-  //     {
-  //       component: 'CNavItem',
-  //       name: 'Badges',
-  //       to: '/notifications/badges',
-  //     },
-  //     {
-  //       component: 'CNavItem',
-  //       name: 'Modals',
-  //       to: '/notifications/modals',
-  //     },
-  //     {
-  //       component: 'CNavItem',
-  //       name: 'Toasts',
-  //       to: '/notifications/toasts',
-  //     },
-  //   ],
-  // },
+  {
+    component: 'CNavItem',
+    name: 'Our Casino',
+    to: '/casino/ourcasino',
+    icon: 'cil-drop',
+  },
+  {
+    component: 'CNavItem',
+    name: 'Virtual Casino',
+    to: '/virtual/virtualcasino',
+    icon: 'cil-drop',
+    badge: {
+      color: 'primary',
+      text: 'NEW',
+      shape: 'pill',
+    },
+  },
   // {
   //   component: 'CNavItem',
   //   name: 'Widgets',
@@ -323,32 +229,108 @@ export default [
   //   component: 'CNavTitle',
   //   name: 'Extras',
   // },
-  // {
-  //   component: 'CNavGroup',
-  //   name: 'Pages',
-  //   to: '/pages',
-  //   icon: 'cil-star',
-  //   items: [
-  //     {
-  //       component: 'CNavItem',
-  //       name: 'Login',
-  //       to: '/pages/login',
-  //     },
-  //     {
-  //       component: 'CNavItem',
-  //       name: 'Register',
-  //       to: '/pages/register',
-  //     },
-  //     {
-  //       component: 'CNavItem',
-  //       name: 'Error 404',
-  //       to: '/pages/404',
-  //     },
-  //     {
-  //       component: 'CNavItem',
-  //       name: 'Error 500',
-  //       to: '/pages/500',
-  //     },
-  //   ],
-  // },
+  {
+    component: 'CNavGroup',
+    name: 'Events',
+    icon: 'cil-calendar',
+    items: [
+      {
+        component: 'CNavGroup',
+        name: 'Cricket',
+        items: [
+          {
+            component: 'CNavGroup',
+            name: 'Madhya Pradesh League',
+            items: [
+              {
+                component: 'CNavItem',
+                name: 'Chambal Ghariyals v Indore Pink Panthers',
+                to: '/notifications/alerts',
+              },
+              {
+                component: 'CNavItem',
+                name: 'Bhopal Leopards v Bundelkhand Bulls',
+                to: '/notifications/badges',
+              },
+            ],
+          },
+          {
+            component: 'CNavGroup',
+            name: 'Major League Cricket',
+            items: [
+              {
+                component: 'CNavItem',
+                name: 'Los Angeles Knight Riders v Texas Super Kings',
+                to: '/events/cricket/major-league-cricket/mi-v-seattle',
+              },
+              {
+                component: 'CNavItem',
+                name: 'San Francisco Unicorns v Mi New York',
+                to: '/events/cricket/major-league-cricket/mi-v-seattle',
+              },
+            ],
+          },
+          {
+            component: 'CNavGroup',
+            name: 'T20 Blast',
+            items: [
+              {
+                component: 'CNavItem',
+                name: 'Somerset v Kent',
+                to: '/events/cricket/t20-blast/lancashire-v-yorkshire',
+              },
+            ],
+          },
+          {
+            component: 'CNavGroup',
+            name: 'Tamil Nadu Premier League',
+            items: [
+              {
+                component: 'CNavItem',
+                name: 'Ruby Trichy Warriors v Tiruppur Tamizhans',
+                to: '/events/cricket/tnpl/kovai-v-chepauk',
+              },
+              {
+                component: 'CNavItem',
+                name: 'Nellai Royal Kings v Salem Spartans',
+                to: '/events/cricket/tnpl/kovai-v-chepauk',
+              },
+              {
+                component: 'CNavItem',
+                name: 'Dindigul Dragons v Chepauk Super Gillies',
+                to: '/events/cricket/tnpl/kovai-v-chepauk',
+              },
+            ],
+          },
+          {
+            component: 'CNavGroup',
+            name: "Women's T20 Blast",
+            items: [
+              {
+                component: 'CNavItem',
+                name: 'Somerset W v Durham W',
+                to: '/events/cricket/women-t20-blast/vipers-v-storm',
+              },
+            ],
+          },
+          {
+            component: 'CNavGroup',
+            name: "International Twenty20 Matches",
+            items: [
+              {
+                component: 'CNavItem',
+                name: 'Scotland v Netherlands',
+                to: '/events/cricket/women-t20-blast/vipers-v-storm',
+              },
+              {
+                component: 'CNavItem',
+                name: 'Ireland v West Indies',
+                to: '/events/cricket/women-t20-blast/vipers-v-storm',
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  }
 ]

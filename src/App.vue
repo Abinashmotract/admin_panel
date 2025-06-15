@@ -29,24 +29,24 @@ onBeforeMount(() => {
   setColorMode(currentTheme.theme)
 })
 
-onMounted(() => {
-  document.addEventListener('contextmenu', (e) => e.preventDefault())
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'F12' ||
-      (e.ctrlKey && e.shiftKey && ['I', 'J', 'C'].includes(e.key)) ||
-      (e.ctrlKey && e.key === 'u')) {
-      e.preventDefault()
-    }
-  })
-  setInterval(function () {
-    const start = performance.now()
-    debugger
-    const end = performance.now()
-    if (end - start > 100) {
-      window.location.href = "about:blank"
-    }
-  }, 1000)
-})
+// onMounted(() => {
+//   document.addEventListener('contextmenu', (e) => e.preventDefault())
+//   document.addEventListener('keydown', (e) => {
+//     if (e.key === 'F12' ||
+//       (e.ctrlKey && e.shiftKey && ['I', 'J', 'C'].includes(e.key)) ||
+//       (e.ctrlKey && e.key === 'u')) {
+//       e.preventDefault()
+//     }
+//   })
+//   setInterval(function () {
+//     const start = performance.now()
+//     debugger
+//     const end = performance.now()
+//     if (end - start > 100) {
+//       window.location.href = "about:blank"
+//     }
+//   }, 1000)
+// })
 </script>
 <!-- :class="`bg-${colorMode}`" -->
 <template>

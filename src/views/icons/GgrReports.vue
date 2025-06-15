@@ -63,12 +63,6 @@
 <script setup>
 import { ref, computed } from 'vue'
 
-const activeTab = ref('loginhistory')
-
-const filter = ref('matched')
-const backlay = ref('all')
-const entries = ref(50)
-const search = ref('')
 
 const bets = ref([
     {

@@ -10,7 +10,7 @@
         <div class="marquee-container">
           <marquee behavior="scroll" direction="left" scrollamount="6">
             <div v-for="(category, index) in categories" :key="index" class="marquee-item">
-              <img :src="category.icon" alt="icon" class="category-icon mb-1" />
+              <img :src="category.icon" alt="icon" class="category-icon mb-2" />
               <p>{{ category.name }}</p>
             </div>
           </marquee>
@@ -180,6 +180,18 @@ import { ref, computed } from 'vue'
 import latest from '../../assets/images/latestadd.jpeg';
 import latest1 from '../../assets/images/latest1.jpeg';
 import Footer from '../../views/pages/Footer.vue';
+const athleticsIcon = '/world777-icons/Athletics.png'
+const badmintonIcon = '/world777-icons/Badminton.png'
+const baseballIcon = '/world777-icons/Baseball.png'
+const basketballIcon = '/world777-icons/Basketball.png'
+const dartsIcon = '/world777-icons/Darts.png'
+const eGamesIcon = '/world777-icons/EGames.png'
+const footballIcon = '/world777-icons/Football.png'
+const motorbikesIcon = '/world777-icons/Motorbikes.png'
+const rugbyUnionIcon = '/world777-icons/RugbyUnion.png'
+const sumoIcon = '/world777-icons/Sumo.png'
+const virtualSportsIcon = '/world777-icons/Virtualsports.png'
+
 const visibleOffcanvas = ref(false)
 
 const login = ref({
@@ -195,42 +207,41 @@ const onLogin = () => {
 const categories = [
   {
     name: 'Motorbikes',
-    icon: 'https://ik.imagekit.io/bmaxmbpyx/https://wdemo.xigxa.com/admin/assets/images/iconsports/politics.svg',
+    icon: motorbikesIcon,
   },
   {
     name: 'Athletics',
-    icon: 'https://ik.imagekit.io/bmaxmbpyx/https://wdemo.xigxa.com/admin/assets/images/iconsports/politics.svg',
+    icon: athleticsIcon,
   },
   {
     name: 'Basketball 3x3',
-    icon: 'https://ik.imagekit.io/bmaxmbpyx/https://wdemo.xigxa.com/admin/assets/images/iconsports/politics.svg',
+    icon: basketballIcon,
   },
   {
     name: 'Sumo',
-    icon: 'https://ik.imagekit.io/bmaxmbpyx/https://wdemo.xigxa.com/admin/assets/images/iconsports/politics.svg',
+    icon: sumoIcon,
   },
   {
     name: 'Virtual sports',
-    icon: 'https://ik.imagekit.io/bmaxmbpyx/https://wdemo.xigxa.com/admin/assets/images/iconsports/politics.svg',
+    icon: virtualSportsIcon,
   },
   {
     name: 'Baseball',
-    icon: 'https://ik.imagekit.io/bmaxmbpyx/https://wdemo.xigxa.com/admin/assets/images/iconsports/politics.svg',
+    icon: baseballIcon,
   },
   {
     name: 'Rugby Union',
-    icon: 'https://ik.imagekit.io/bmaxmbpyx/https://wdemo.xigxa.com/admin/assets/images/iconsports/politics.svg',
+    icon: rugbyUnionIcon,
   },
   {
     name: 'Darts',
-    icon: 'https://ik.imagekit.io/bmaxmbpyx/https://wdemo.xigxa.com/admin/assets/images/iconsports/politics.svg',
+    icon: dartsIcon,
   },
   {
     name: 'American Football',
-    icon: 'https://ik.imagekit.io/bmaxmbpyx/https://wdemo.xigxa.com/admin/assets/images/iconsports/politics.svg',
+    icon: footballIcon, // Using Football.png for American Football
   },
 ]
-
 const latestMatchAdd = [
   { name: 'Motorbikes', latestmatchimage: latest },
   { name: 'Athletics', latestmatchimage: latest1 },
@@ -428,8 +439,8 @@ marquee {
 }
 
 .category-icon {
-  width: 24px;
-  height: 24px;
+  height: 30px;
+  max-width: 50px;
   margin: 0;
   padding: 0;
   display: block;
